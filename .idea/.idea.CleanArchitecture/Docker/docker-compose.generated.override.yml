@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  web-api:
+    build:
+      context: "/home/shanmu/DEV/clean-architecture"
+      dockerfile: "src/Web.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Web.Api.dll"
+    environment:
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net9.0/Web.Api.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapi:dev"
+    ports: []
+    volumes:
+    - "/home/shanmu/DEV/clean-architecture/src/Web.Api:/app:rw"
+    - "/home/shanmu/DEV/clean-architecture:/src:rw"
+    - "/home/shanmu/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
