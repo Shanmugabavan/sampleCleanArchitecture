@@ -1,11 +1,18 @@
 services:
-  test-runner:
-    image: mcr.microsoft.com/dotnet/sdk:9.0
-    container_name: test-runner
-    working_dir: /app
-    volumes:
-      - ./:/app
-    command: [ "dotnet", "test", "tests/ArchitectureTests/ArchitectureTests.csproj" ]
+#  test-runner:
+#    image: mcr.microsoft.com/dotnet/sdk:9.0
+#    container_name: test-runner
+#    working_dir: /app
+#    volumes:
+#      - ./:/app
+#    command: [ "dotnet", "test", "tests/ArchitectureTests/ArchitectureTests.csproj" ]
+    
+#  test-runner2:
+##    image: ${DOCKER_REGISTRY-}architecture-tests
+#    build:
+#      context: .
+#      dockerfile: tests/ArchitectureTests/Dockerfile
+#    container_name: architecture-tests
     
   web-api:
     image: ${DOCKER_REGISTRY-}webapi
